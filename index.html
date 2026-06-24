@@ -5,31 +5,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Uniqs · IMAT Yoğun Hazırlık Kampı</title>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <style>
-        /* Temel Ayarlar */
-        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-        :root { --gold: #FF6B00; --gold-mid: #FF8C33; --gold-light: #2BAFA0; --gold-pale: #FFE8D6; --gold-xpale: #FFF5EE; --teal: #2BAFA0; --white: #FFFFFF; --text-dark: #1A2422; --text-mid: #3D5450; --text-muted: #7A9E99; --border: rgba(43,175,160,0.18); --border-strong: rgba(255,107,0,0.4); }
-        html { scroll-behavior: smooth; }
-        body { font-family: 'Inter', sans-serif; background: var(--white); color: var(--text-dark); line-height: 1.7; }
+   <style>
+    /* Buradaki tüm eski kodları sil ve aşağıdakini yapıştır */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+        --gold: #FF6B00; --gold-mid: #FF8C33; --gold-light: #2BAFA0; --gold-pale: #FFE8D6; 
+        --gold-xpale: #FFF5EE; --teal: #2BAFA0; --teal-light: #E6F7F5; --white: #FFFFFF; 
+        --off-white: #F5FAFA; --text-dark: #1A2422; --text-mid: #3D5450; --text-muted: #7A9E99; 
+        --border: rgba(43,175,160,0.18); --border-strong: rgba(255,107,0,0.4); --section-alt: #EBF8F7;
+    }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Inter', sans-serif; background: var(--white); color: var(--text-dark); line-height: 1.7; }
 
-        /* Navigasyon */
-        nav { position: sticky; top: 0; z-index: 100; background: rgba(255,255,255,0.97); backdrop-filter: blur(12px); border-bottom: 1px solid var(--border); padding: 0 2rem; display: flex; align-items: center; justify-content: space-between; height: 64px; }
-        .nav-logo img { height: 32px; width: auto; }
-        .nav-links { display: flex; gap: 2rem; list-style: none; }
-        .nav-links a { font-size: 0.8rem; color: var(--text-muted); text-decoration: none; text-transform: uppercase; }
-        .nav-links a:hover { color: var(--gold); }
-        .nav-right { display: flex; align-items: center; gap: 0.75rem; }
-        .nav-social { display: flex; align-items: center; justify-content: center; width: 36px; height: 36px; border-radius: 50%; color: white; text-decoration: none; }
-        .nav-social--wa { background: #25D366; }
-        
-        /* Hero Bölümü */
-        .hero { min-height: 80vh; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; padding: 4rem 2rem; background: linear-gradient(160deg, #FFF5EE 0%, #E6F7F5 100%); }
-        .hero h1 { font-family: 'Playfair Display', serif; font-size: clamp(2rem, 5vw, 4rem); margin-bottom: 1rem; }
-        .hero h1 em { font-style: italic; color: var(--gold); }
-        
-        /* Responsive */
-        @media (max-width: 768px) { .nav-links { display: none; } }
-    </style>
+    /* Navigasyon ve diğer tüm stillerini buraya yapıştır... */
+    /* (Daha önce gönderdiğin uzun CSS kodunun tamamını buraya ekle) */
+    
+    /* ... */
+    
+    @media (max-width: 768px) {
+        .nav-links { display: none; }
+        .countdown { gap: 0.6rem; }
+        .countdown-num { font-size: 2rem; min-width: 52px; }
+    }
+</style>
 </head>
 <body>
 
