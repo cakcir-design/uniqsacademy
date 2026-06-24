@@ -21,3 +21,1066 @@
     <!-- ... Diğer tüm bölümler ... -->
 </body>
 </html>
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html>
+<html lang='tr' 
+<head>
+<meta charset='UTF-8'/>
+<meta content='width=device-width, initial-scale=1.0' name='viewport'/>
+<title>Uniqs &#183; IMAT Yoğun Hazırlık Kampı &amp; Mentörlük Programı</title>
+<link href='https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&amp;family=Inter:wght@300;400;500;600;700&amp;display=swap' rel='stylesheet'/>
+
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --gold: #FF6B00;
+    --gold-mid: #FF8C33;
+    --gold-light: #2BAFA0;
+    --gold-pale: #FFE8D6;
+    --gold-xpale: #FFF5EE;
+    --teal: #2BAFA0;
+    --teal-light: #E6F7F5;
+    --white: #FFFFFF;
+    --off-white: #F5FAFA;
+    --text-dark: #1A2422;
+    --text-mid: #3D5450;
+    --text-muted: #7A9E99;
+    --border: rgba(43,175,160,0.18);
+    --border-strong: rgba(255,107,0,0.4);
+    --section-alt: #EBF8F7;
+  }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'Inter', sans-serif;
+    background: var(--white);
+    color: var(--text-dark);
+    line-height: 1.7;
+  }
+
+  /* ─── NAV ─── */
+  nav {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: rgba(255,255,255,0.97);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--border);
+    padding: 0 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 64px;
+  }
+
+  .nav-logo {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+  }
+  .nav-logo img {
+    height: 32px;
+    width: auto;
+    display: block;
+  }
+
+  .nav-links { display: flex; gap: 2rem; list-style: none; }
+  .nav-links a {
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    text-decoration: none;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    transition: color 0.2s;
+  }
+  .nav-links a:hover { color: var(--gold); }
+
+  .nav-right {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+  }
+
+  .nav-social {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    text-decoration: none;
+    transition: transform 0.2s, opacity 0.2s;
+    flex-shrink: 0;
+  }
+  .nav-social:hover { transform: scale(1.12); opacity: 0.85; }
+  .nav-social--wa { background: #25D366; }
+  .nav-social--ig { background: linear-gradient(135deg, #f9ce34, #ee2a7b, #6228d7); }
+
+  .nav-cta {
+    background: var(--gold);
+    color: #fff;
+    font-size: 0.78rem;
+    font-weight: 700;
+    padding: 0.5rem 1.25rem;
+    border-radius: 4px;
+    text-decoration: none;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    transition: background 0.2s;
+  }
+  .nav-cta:hover { background: var(--gold-mid); }
+
+  /* ─── HERO ─── */
+  .hero {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 6rem 2rem 4rem;
+    background: linear-gradient(160deg, #FFF5EE 0%, #E6F7F5 100%);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .hero-bg-svg {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  .hero > *:not(.hero-bg-svg) { position: relative; z-index: 1; }
+
+  .hero-badge {
+    display: inline-block;
+    background: var(--gold-pale);
+    border: 1px solid var(--border-strong);
+    color: var(--gold);
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    padding: 0.4rem 1.25rem;
+    border-radius: 2px;
+    margin-bottom: 2rem;
+  }
+
+  .hero h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(2.4rem, 6vw, 5rem);
+    font-weight: 900;
+    line-height: 1.1;
+    color: var(--text-dark);
+    max-width: 800px;
+    margin-bottom: 0.5rem;
+  }
+
+  .hero h1 em {
+    font-style: italic;
+    color: var(--gold);
+  }
+
+  .hero-subtitle {
+    font-size: clamp(1rem, 2vw, 1.2rem);
+    color: var(--text-mid);
+    max-width: 560px;
+    margin: 1.5rem auto 3rem;
+    font-weight: 300;
+  }
+
+  /* ─── COUNTDOWN ─── */
+  .countdown-label {
+    font-size: 0.68rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    margin-bottom: 1rem;
+  }
+
+  .countdown {
+    display: flex;
+    gap: 1.25rem;
+    justify-content: center;
+    margin-bottom: 3rem;
+  }
+
+  .countdown-unit {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.3rem;
+  }
+
+  .countdown-num {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.8rem;
+    font-weight: 700;
+    color: var(--gold);
+    line-height: 1;
+    min-width: 70px;
+    text-align: center;
+    background: var(--white);
+    border: 1.5px solid var(--border-strong);
+    border-radius: 6px;
+    padding: 0.5rem 0.75rem;
+    box-shadow: 0 2px 12px rgba(255,107,0,0.32);
+  }
+
+  .countdown-sep {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.2rem;
+    color: var(--gold-light);
+    align-self: center;
+    margin-top: -0.5rem;
+  }
+
+  .countdown-unit span:last-child {
+    font-size: 0.63rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+  }
+
+  .hero-actions {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .btn-primary {
+    background: var(--gold);
+    color: #fff;
+    font-size: 0.9rem;
+    font-weight: 700;
+    padding: 0.85rem 2.5rem;
+    border-radius: 4px;
+    text-decoration: none;
+    letter-spacing: 0.04em;
+    transition: background 0.2s, transform 0.15s;
+    display: inline-block;
+  }
+  .btn-primary:hover { background: var(--gold-mid); transform: translateY(-2px); }
+
+  .btn-outline {
+    border: 1.5px solid var(--border-strong);
+    color: var(--gold);
+    font-size: 0.9rem;
+    font-weight: 600;
+    padding: 0.85rem 2rem;
+    border-radius: 4px;
+    text-decoration: none;
+    letter-spacing: 0.04em;
+    background: var(--white);
+    transition: border-color 0.2s, background 0.2s;
+    display: inline-block;
+  }
+  .btn-outline:hover { background: var(--gold-pale); border-color: var(--gold); }
+
+  /* ─── SECTIONS ─── */
+  section {
+    padding: 6rem 2rem;
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+
+  .eyebrow {
+    font-size: 0.68rem;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 0.75rem;
+    font-weight: 700;
+  }
+
+  .section-title {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(1.8rem, 3.5vw, 2.8rem);
+    font-weight: 700;
+    color: var(--text-dark);
+    line-height: 1.2;
+    margin-bottom: 1rem;
+  }
+
+  .section-desc {
+    color: var(--text-mid);
+    font-size: 1.05rem;
+    max-width: 600px;
+    font-weight: 300;
+    line-height: 1.8;
+  }
+
+  .divider {
+    width: 44px;
+    height: 2.5px;
+    background: var(--gold);
+    margin: 1.25rem 0;
+    border-radius: 2px;
+  }
+
+  /* ─── STATS BAR ─── */
+  .stats-bar {
+    background: linear-gradient(135deg, var(--gold) 0%, #FF8C33 50%, var(--teal) 100%);
+    padding: 3.5rem 2rem;
+  }
+
+  .stats-grid {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 2rem;
+    text-align: center;
+  }
+
+  .stat-num {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.8rem;
+    font-weight: 700;
+    color: #fff;
+    line-height: 1;
+    margin-bottom: 0.4rem;
+  }
+
+  .stat-label {
+    font-size: 0.78rem;
+    color: rgba(255,255,255,0.8);
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+  }
+
+  /* ─── PROGRAM CARDS ─── */
+  .program-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+    margin-top: 3rem;
+  }
+
+  .program-card {
+    background: var(--white);
+    border: 1.5px solid var(--border);
+    border-radius: 8px;
+    padding: 2rem;
+    transition: border-color 0.25s, box-shadow 0.25s, transform 0.2s;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .program-card:hover {
+    border-color: var(--border-strong);
+    box-shadow: 0 8px 32px rgba(255,107,0,0.1);
+    transform: translateY(-4px);
+  }
+
+  .program-card.featured {
+    border-color: var(--gold);
+    background: linear-gradient(160deg, #FFF5EE 0%, #E6F7F5 100%);
+    box-shadow: 0 4px 24px rgba(255,107,0,0.12);
+  }
+
+  .card-tag {
+    font-size: 0.65rem;
+    letter-spacing: 0.13em;
+    text-transform: uppercase;
+    color: var(--gold);
+    font-weight: 700;
+    margin-bottom: 1rem;
+  }
+
+  .card-icon { font-size: 1.8rem; margin-bottom: 1rem; }
+
+  .card-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--text-dark);
+    margin-bottom: 0.75rem;
+  }
+
+  .card-text { font-size: 0.9rem; color: var(--text-mid); line-height: 1.7; flex-grow: 1; }
+
+  .card-features { list-style: none; margin: 1.25rem 0; }
+
+  .card-features li {
+    font-size: 0.85rem;
+    color: var(--text-mid);
+    padding: 0.35rem 0;
+    border-top: 1px solid var(--border);
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+  }
+
+  .card-features li::before {
+    content: '';
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background: var(--gold);
+    flex-shrink: 0;
+  }
+  
+  .card-price {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: var(--text-dark);
+    margin-bottom: 1rem;
+    padding-top: 1rem;
+    border-top: 2px solid var(--gold-pale);
+  }
+  
+  .card-price span { font-size: 0.9rem; font-family: 'Inter', sans-serif; font-weight: 400; color: var(--text-muted); }
+
+  /* ─── SUBJECTS ─── */
+  .subjects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1rem;
+    margin-top: 3rem;
+  }
+
+  .subject-card {
+    background: var(--white);
+    border: 1.5px solid var(--border);
+    border-radius: 6px;
+    padding: 1.4rem;
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    transition: border-color 0.2s, box-shadow 0.2s;
+  }
+
+  .subject-card:hover {
+    border-color: var(--gold);
+    box-shadow: 0 4px 16px rgba(255,107,0,0.36);
+  }
+
+  .subject-icon { font-size: 1.5rem; flex-shrink: 0; margin-top: 0.1rem; }
+
+  .subject-name { font-weight: 600; font-size: 0.95rem; color: var(--text-dark); margin-bottom: 0.2rem; }
+
+  .subject-detail { font-size: 0.8rem; color: var(--text-muted); }
+
+  /* ─── TIMELINE ─── */
+  .timeline {
+    margin-top: 3rem;
+    position: relative;
+    padding-left: 2.5rem;
+  }
+
+  .timeline::before {
+    content: '';
+    position: absolute;
+    left: 10px;
+    top: 0;
+    bottom: 0;
+    width: 1.5px;
+    background: linear-gradient(to bottom, var(--gold), var(--gold-pale));
+  }
+
+  .timeline-item { position: relative; padding-bottom: 2.5rem; }
+
+  .timeline-item::before {
+    content: '';
+    position: absolute;
+    left: -2.15rem;
+    top: 5px;
+    width: 11px;
+    height: 11px;
+    border-radius: 50%;
+    background: var(--gold);
+    border: 2.5px solid var(--white);
+    box-shadow: 0 0 0 3px rgba(255,107,0,0.2);
+  }
+
+  .timeline-week {
+    font-size: 0.68rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--gold);
+    font-weight: 700;
+    margin-bottom: 0.3rem;
+  }
+
+  .timeline-title { font-weight: 600; color: var(--text-dark); margin-bottom: 0.4rem; }
+  .timeline-desc { font-size: 0.875rem; color: var(--text-mid); }
+
+  /* ─── FAQ ─── */
+  .faq-list {
+    margin-top: 3rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.65rem;
+    max-width: 800px;
+  }
+
+  .faq-item {
+    background: var(--white);
+    border: 1.5px solid var(--border);
+    border-radius: 6px;
+    overflow: hidden;
+  }
+
+  .faq-question {
+    width: 100%;
+    background: none;
+    border: none;
+    color: var(--text-dark);
+    font-family: 'Inter', sans-serif;
+    font-size: 0.95rem;
+    font-weight: 600;
+    text-align: left;
+    padding: 1.2rem 1.5rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+  }
+
+  .faq-arrow { color: var(--gold); font-size: 1.1rem; transition: transform 0.25s; flex-shrink: 0; }
+
+  .faq-answer {
+    display: none;
+    padding: 0 1.5rem 1.25rem;
+    font-size: 0.9rem;
+    color: var(--text-mid);
+    line-height: 1.8;
+    border-top: 1px solid var(--border);
+  }
+
+  .faq-item.open .faq-answer { display: block; }
+  .faq-item.open .faq-arrow { transform: rotate(180deg); }
+  .faq-item.open { border-color: var(--gold); background: var(--gold-xpale); }
+
+  /* ─── SOSYAL MEDYA ─── */
+  .social-section {
+    text-align: center;
+    padding: 5rem 2rem 6rem;
+    background: var(--white);
+  }
+
+  .social-links {
+    display: flex;
+    gap: 1.5rem;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 2.5rem;
+  }
+
+  .social-btn {
+    display: flex;
+    align-items: center;
+    gap: 0.9rem;
+    background: var(--white);
+    border: 1.5px solid var(--border);
+    border-radius: 10px;
+    padding: 1rem 1.75rem;
+    text-decoration: none;
+    text-align: left;
+    transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s;
+    min-width: 260px;
+  }
+
+  .social-btn--whatsapp .social-icon { background: #25D366; }
+  .social-btn--whatsapp:hover { border-color: #25D366; }
+
+  .social-btn--instagram .social-icon {
+    background: linear-gradient(135deg, #f9ce34, #ee2a7b, #6228d7);
+  }
+  .social-btn--instagram:hover { border-color: #c2266b; }
+
+  .social-text { display: flex; flex-direction: column; gap: 0.15rem; }
+  .social-text strong { font-size: 1rem; color: var(--text-dark); }
+  .social-text small { font-size: 0.78rem; color: var(--text-muted); }
+
+  /* ─── CTA ─── */
+  .cta-section {
+    background: linear-gradient(135deg, var(--gold) 0%, var(--teal) 100%);
+    text-align: center;
+    padding: 6rem 2rem;
+  }
+
+  .cta-section .section-title { color: #fff; margin: 1rem auto; }
+  .cta-section .eyebrow { color: rgba(255,255,255,0.75); }
+  .cta-section .section-desc { color: rgba(255,255,255,0.85); margin: 0 auto 2.5rem; text-align: center; }
+
+  .btn-white {
+    background: #fff;
+    color: var(--gold);
+    font-size: 0.9rem;
+    font-weight: 700;
+    padding: 0.85rem 2.5rem;
+    border-radius: 4px;
+    text-decoration: none;
+    letter-spacing: 0.04em;
+    transition: background 0.2s, transform 0.15s;
+    display: inline-block;
+  }
+  .btn-white:hover { background: var(--gold-xpale); transform: translateY(-2px); }
+
+  .btn-outline-white {
+    border: 2px solid rgba(255,255,255,0.6);
+    color: #fff;
+    font-size: 0.9rem;
+    font-weight: 600;
+    padding: 0.85rem 2rem;
+    border-radius: 4px;
+    text-decoration: none;
+    letter-spacing: 0.04em;
+    transition: border-color 0.2s, background 0.2s;
+    display: inline-block;
+  }
+  .btn-outline-white:hover { background: rgba(255,255,255,0.12); border-color: #fff; }
+
+  /* ─── FOOTER ─── */
+  footer {
+    background: var(--text-dark);
+    padding: 2rem;
+    text-align: center;
+  }
+
+  footer p { font-size: 0.8rem; color: var(--text-muted); }
+  footer a { color: var(--gold-light); text-decoration: none; }
+
+  /* ─── RESPONSIVE ─── */
+  @media (max-width: 768px) {
+    .nav-links { display: none; }
+    .countdown { gap: 0.6rem; }
+    .countdown-num { font-size: 2rem; min-width: 52px; }
+  }
+
+</head>
+<body>
+
+ maxwidgets='1' showaddelement='no' style='display:none;'/>
+
+<!-- NAV -->
+<nav>
+  <a class='nav-logo' href='/'>
+  <img alt='Uniqs Logo' src='https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhiKmnuiExz168vuomgiUml_EsTT5oyMR-_epx752Y-k4WkTa5AJKPTwAPyRi4WkznnAkkDIxsRmgWUy-9lDhYt8iK9cXu8hacj808ycoG3wxs86MYdOokpFL4A02pfSFGUGXXk0LXaYYl4hrnCfkqPPbHj879DWKHN5WE0BTUY733Kpd1GJHEC11PbPO4/s320/uniqs-logo.png'/>
+</a>
+  <ul class='nav-links'>
+    <li><a href='#program'>Program</a></li>
+    <li><a href='#konular'>Konular</a></li>
+    <li><a href='#sss'>SSS</a></li>
+  </ul>
+  <div class='nav-right'>
+    <a class='nav-social nav-social--wa' href='https://wa.me/905393673263' rel='noopener' target='_blank'>
+      <svg fill='#fff' height='18' viewBox='0 0 32 32' width='18'>
+        <path d='M16.004 3C9.376 3 4 8.373 4 14.997c0 2.39.713 4.62 1.93 6.49L4.6 28.5l7.21-1.892a12.93 12.93 0 0 0 4.19.7h.004c6.628 0 12.001-5.373 12.001-11.997C28.005 8.373 22.632 3 16.004 3zm6.99 17.034c-.297.836-1.71 1.6-2.353 1.7-.601.094-1.359.13-2.196-.137-.5-.16-1.143-.373-1.965-.732-3.458-1.49-5.715-4.95-5.886-5.181-.172-.232-1.4-1.864-1.4-3.555 0-1.692.886-2.523 1.2-2.868.314-.345.687-.43.916-.43.229 0 .458.002.658.012.21.01.493-.08.77.587.286.69.972 2.378 1.058 2.55.086.172.143.374.029.6-.114.226-.172.366-.343.566-.172.2-.36.447-.515.6-.172.172-.351.358-.151.704.2.345.887 1.464 1.903 2.371 1.31 1.17 2.415 1.532 2.766 1.703.351.172.557.143.762-.086.206-.229.886-1.032 1.123-1.387.237-.355.473-.296.797-.178.323.118 2.058.97 2.41 1.147.351.178.585.265.671.412.086.147.086.853-.21 1.689z'/>
+      </svg>
+    </a>
+    <a class='nav-social nav-social--ig' href='https://www.instagram.com/uniqs.academy?igsh=eGJoZzVxNnQ3dnlq' rel='noopener' target='_blank'>
+      <svg fill='none' height='16' stroke='#fff' stroke-width='1.8' viewBox='0 0 24 24' width='16'>
+        <rect height='19' rx='5' width='19' x='2.5' y='2.5'/>
+        <circle cx='12' cy='12' r='4.3'/>
+        <circle cx='17.2' cy='6.8' fill='#fff' r='1.1' stroke='none'/>
+      </svg>
+    </a>
+    <a class='nav-cta' href='#kayit'>Şimdi Başvur</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<div class='hero'>
+  <svg class='hero-bg-svg' viewBox='0 0 1440 900' xmlns='http://www.w3.org/2000/svg'>
+    <g fill='none' opacity='0.35' stroke='#FF6B00' stroke-linecap='round' stroke-linejoin='round'>
+      <g transform='translate(90,80)'>
+        <polygon fill='rgba(255,107,0,0.24)' points='80,30 160,60 80,90 0,60' stroke-width='2.5'/>
+        <line stroke-width='2' x1='80' x2='80' y1='60' y2='120'/>
+        <circle cx='80' cy='30' fill='rgba(255,107,0,0.3)' r='4' stroke-width='2'/>
+        <path d='M160,60 Q175,55 178,70 Q181,85 170,95 L165,110' stroke-width='1.8'/>
+        <line stroke-width='1.5' x1='165' x2='162' y1='110' y2='125'/>
+        <line stroke-width='1.5' x1='165' x2='168' y1='110' y2='126'/>
+        <line stroke-width='1.5' x1='165' x2='171' y1='110' y2='123'/>
+        <line stroke-dasharray='4,3' stroke-width='1.5' x1='80' x2='40' y1='120' y2='135'/>
+        <line stroke-dasharray='4,3' stroke-width='1.5' x1='80' x2='120' y1='120' y2='135'/>
+      </g>
+      <g transform='translate(1220,60)'>
+        <line stroke-width='2.5' x1='40' x2='20' y1='20' y2='50'/>
+        <line stroke-width='2.5' x1='80' x2='100' y1='20' y2='50'/>
+        <circle cx='20' cy='50' r='5' stroke-width='2'/>
+        <circle cx='100' cy='50' r='5' stroke-width='2'/>
+        <path d='M20,55 Q20,90 60,90 Q100,90 100,55' stroke-width='2.5'/>
+        <line stroke-width='2.5' x1='60' x2='60' y1='90' y2='140'/>
+        <circle cx='60' cy='148' fill='rgba(255,107,0,0.4)' r='18' stroke-width='2.5'/>
+        <circle cx='60' cy='148' r='10' stroke-width='1.5'/>
+      </g>
+      <g transform='translate(50,580)'>
+        <path d='M10,10 Q10,0 20,0 L110,8 L110,130 L20,122 Q10,122 10,112 Z' fill='rgba(255,107,0,0.16)' stroke-width='2'/>
+        <path d='M110,8 L200,0 Q210,0 210,10 L210,112 Q210,122 200,122 L110,130 Z' fill='rgba(255,107,0,0.16)' stroke-width='2'/>
+        <line stroke-width='3' x1='110' x2='110' y1='8' y2='130'/>
+        <line stroke-width='1.3' x1='30' x2='95' y1='30' y2='32'/>
+        <line stroke-width='1.3' x1='30' x2='95' y1='44' y2='46'/>
+        <line stroke-width='1.3' x1='30' x2='95' y1='58' y2='60'/>
+        <line stroke-width='1.3' x1='30' x2='80' y1='72' y2='73'/>
+        <line stroke-width='1.3' x1='30' x2='95' y1='86' y2='88'/>
+        <line stroke-width='1.3' x1='30' x2='70' y1='100' y2='101'/>
+        <line stroke-width='1.3' x1='125' x2='190' y1='30' y2='28'/>
+        <line stroke-width='1.3' x1='125' x2='190' y1='44' y2='42'/>
+        <line stroke-width='1.3' x1='125' x2='190' y1='58' y2='56'/>
+        <line stroke-width='1.3' x1='125' x2='175' y1='72' y2='71'/>
+        <line stroke-width='1.3' x1='125' x2='190' y1='86' y2='84'/>
+        <circle cx='155' cy='100' fill='rgba(255,107,0,0.24)' r='12' stroke-width='1.5'/>
+        <line stroke-width='1.5' x1='149' x2='161' y1='94' y2='106'/>
+        <line stroke-width='1.5' x1='161' x2='149' y1='94' y2='106'/>
+      </g>
+      <g transform='translate(1280,500)'>
+        <path d='M20,0 C20,20 60,20 60,40 C60,60 20,60 20,80 C20,100 60,100 60,120 C60,140 20,140 20,160 C20,180 60,180 60,200' stroke-width='2.5'/>
+        <path d='M60,0 C60,20 20,20 20,40 C20,60 60,60 60,80 C60,100 20,100 20,120 C20,140 60,140 60,160 C60,180 20,180 20,200' stroke-width='2.5'/>
+        <line stroke-dasharray='0' stroke-width='1.8' x1='20' x2='60' y1='0' y2='0'/>
+        <line stroke-width='1.8' x1='20' x2='60' y1='40' y2='40'/>
+        <line stroke-width='1.8' x1='20' x2='60' y1='80' y2='80'/>
+        <line stroke-width='1.8' x1='20' x2='60' y1='120' y2='120'/>
+        <line stroke-width='1.8' x1='20' x2='60' y1='160' y2='160'/>
+        <line stroke-width='1.8' x1='20' x2='60' y1='200' y2='200'/>
+      </g>
+      <g transform='translate(130,360)'>
+        <polygon fill='rgba(255,107,0,0.16)' points='40,0 80,22 80,66 40,88 0,66 0,22' stroke-width='2.2'/>
+        <polygon points='40,16 64,29 64,57 40,70 16,57 16,29' stroke-width='1.3'/>
+        <line stroke-width='1.8' x1='40' x2='40' y1='0' y2='-22'/>
+        <line stroke-width='1.8' x1='80' x2='100' y1='22' y2='10'/>
+        <line stroke-width='1.8' x1='80' x2='100' y1='66' y2='78'/>
+        <line stroke-width='1.8' x1='40' x2='40' y1='88' y2='110'/>
+        <line stroke-width='1.8' x1='0' x2='-20' y1='66' y2='78'/>
+        <line stroke-width='1.8' x1='0' x2='-20' y1='22' y2='10'/>
+        <circle cx='40' cy='-22' fill='rgba(255,107,0,0.3)' r='4' stroke-width='1.5'/>
+        <circle cx='100' cy='10' fill='rgba(255,107,0,0.3)' r='4' stroke-width='1.5'/>
+        <circle cx='100' cy='78' fill='rgba(255,107,0,0.3)' r='4' stroke-width='1.5'/>
+        <circle cx='40' cy='110' fill='rgba(255,107,0,0.3)' r='4' stroke-width='1.5'/>
+        <circle cx='-20' cy='78' fill='rgba(255,107,0,0.3)' r='4' stroke-width='1.5'/>
+        <circle cx='-20' cy='10' fill='rgba(255,107,0,0.3)' r='4' stroke-width='1.5'/>
+      </g>
+      <g transform='translate(1260,300)'>
+        <rect fill='rgba(255,107,0,0.4)' height='90' rx='3' stroke-width='2' width='18' x='10' y='0'/>
+        <polygon fill='rgba(255,107,0,0.32)' points='10,90 28,90 19,112' stroke-width='2'/>
+        <rect fill='rgba(255,107,0,0.24)' height='12' rx='2' stroke-width='1.8' width='18' x='10' y='-12'/>
+        <line stroke-width='1' x1='10' x2='28' y1='10' y2='10'/>
+        <line stroke-width='1' x1='10' x2='28' y1='20' y2='20'/>
+        <text fill='rgba(255,107,0,0.55)' font-family='serif' font-size='14' font-style='italic' x='38' y='20'>E=mc&#178;</text>
+        <text fill='rgba(255,107,0,0.45)' font-family='serif' font-size='12' font-style='italic' x='38' y='44'>H&#8322;O</text>
+        <text fill='rgba(255,107,0,0.4)' font-family='serif' font-size='12' font-style='italic' x='38' y='65'>pH=7</text>
+      </g>
+      <g transform='translate(680,30)'>
+        <circle cx='40' cy='40' fill='rgba(255,107,0,0.32)' r='35' stroke-width='2'/>
+        <circle cx='40' cy='40' r='28' stroke-width='1.2'/>
+        <polygon fill='rgba(255,107,0,0.32)' points='40,12 45,40 40,35 35,40' stroke-width='1.8'/>
+        <polygon fill='rgba(255,107,0,0.24)' points='40,68 35,40 40,45 45,40' stroke-width='1.8'/>
+        <polygon points='12,40 40,35 35,40 40,45' stroke-width='1.5'/>
+        <polygon points='68,40 40,45 45,40 40,35' stroke-width='1.5'/>
+        <circle cx='40' cy='40' fill='rgba(255,107,0,0.4)' r='3' stroke-width='1.5'/>
+        <text fill='rgba(255,107,0,0.6)' font-family='serif' font-size='8' font-weight='bold' x='37' y='9'>N</text>
+        <text fill='rgba(255,107,0,0.5)' font-family='serif' font-size='8' x='37' y='76'>S</text>
+        <text fill='rgba(255,107,0,0.5)' font-family='serif' font-size='8' x='72' y='43'>E</text>
+        <text fill='rgba(255,107,0,0.5)' font-family='serif' font-size='8' x='3' y='43'>W</text>
+      </g>
+      <g transform='translate(420,810)'>
+        <path d='M0,20 L80,20 L100,5 L115,38 L130,0 L145,38 L160,20 L240,20 L260,5 L275,38 L290,0 L305,38 L320,20 L400,20 L420,5 L435,38 L450,0 L465,38 L480,20 L560,20' stroke-dasharray='600,0' stroke-width='2'/>
+      </g>
+      <g opacity='0.7' stroke-width='1.5'>
+        <line x1='320' x2='320' y1='120' y2='132'/><line x1='314' x2='326' y1='126' y2='126'/>
+        <line x1='1100' x2='1100' y1='200' y2='212'/><line x1='1094' x2='1106' y1='206' y2='206'/>
+        <line x1='200' x2='200' y1='750' y2='762'/><line x1='194' x2='206' y1='756' y2='756'/>
+        <line x1='1200' x2='1200' y1='750' y2='762'/><line x1='1194' x2='1206' y1='756' y2='756'/>
+        <circle cx='750' cy='820' r='3' stroke-width='1.5'/>
+        <circle cx='400' cy='150' r='3' stroke-width='1.5'/>
+        <circle cx='1050' cy='700' r='3' stroke-width='1.5'/>
+      </g>
+    </g>
+  </svg>
+
+  <div class='hero-badge'>2026 Sınav Dönemi &#183; Sınırlı Kontenjan</div>
+  <h1>IMAT Sınavına<br/><em>Hazır mısın?</em></h1>
+  <p class='hero-subtitle'>İtalya&#8217;da tıp fakültesi kazanmak için tasarlanmış yoğun hazırlık kampı ve birebir mentörlük programıyla hedef üniversitene ulaş.</p>
+
+  <p class='countdown-label'>Sınava Kalan Süre</p>
+  <div class='countdown'>
+    <div class='countdown-unit'>
+      <div class='countdown-num' id='cd-gun'>&#8212;</div>
+      <span>Gün</span>
+    </div>
+    <div class='countdown-sep'>:</div>
+    <div class='countdown-unit'>
+      <div class='countdown-num' id='cd-saat'>&#8212;</div>
+      <span>Saat</span>
+    </div>
+    <div class='countdown-sep'>:</div>
+    <div class='countdown-unit'>
+      <div class='countdown-num' id='cd-dakika'>&#8212;</div>
+      <span>Dakika</span>
+    </div>
+    <div class='countdown-sep'>:</div>
+    <div class='countdown-unit'>
+      <div class='countdown-num' id='cd-saniye'>&#8212;</div>
+      <span>Saniye</span>
+    </div>
+  </div>
+
+  <div class='hero-actions'>
+    <a class='btn-primary' href='#kayit'>Ücretsiz Danışmanlık Al</a>
+    <a class='btn-outline' href='#program'>Programı İncele</a>
+  </div>
+</div>
+
+<!-- STATS -->
+<div class='stats-bar'>
+  <div class='stats-grid'>
+    <div class='stat-item'>
+      <div class='stat-num'>%91</div>
+      <div class='stat-label'>Geçme Oranı</div>
+    </div>
+    <div class='stat-item'>
+      <div class='stat-num'>20+</div>
+      <div class='stat-label'>Mezun Öğrenci</div>
+    </div>
+    <div class='stat-item'>
+      <div class='stat-num'>8</div>
+      <div class='stat-label'>Yıllık Deneyim</div>
+    </div>
+    <div class='stat-item'>
+      <div class='stat-num'>1200+</div>
+      <div class='stat-label'>Soru Bankası</div>
+    </div>
+  </div>
+</div>
+
+<!-- PROGRAM -->
+<section id='program'>
+  <div class='eyebrow'>Paketler</div>
+  <h2 class='section-title'>Sana Uygun<br/>Hazırlık Programı</h2>
+  <div class='divider'/>
+  <p class='section-desc'>Her öğrencinin ihtiyacı farklıdır. Deneyim seviyene ve hedeflerine göre paketlerimiz.</p>
+
+  <div class='program-grid'>
+    <div class='program-card'>
+      <div class='card-tag'>Temel &#183; Grup Kampı</div>
+      <div class='card-icon'>📚</div>
+      <div class='card-title'>Yoğun Hazırlık Kampı</div>
+      <p class='card-text'>Canlı online dersler, soru çözüm seansları ve grup dinamiğiyle IMAT konularını derinlemesine öğren.</p>
+      <ul class='card-features'>
+        <li>Haftalık 10+ saat canlı ders</li>
+        <li>9 haftalık yapılandırılmış müfredat</li>
+        <li>Mock sınav simülasyonları</li>
+        <li>Grup soru bankası erişimi</li>
+        <li>Kayıt videoları ve ders notları</li>
+      </ul>
+      <div class='card-price'>45.000 TL<span> +KDV</span></div>
+    </div>
+
+    <div class='program-card featured'>
+      <div class='card-tag'>Premium &#183; Birebir Mentörlük</div>
+      <div class='card-icon'>🎯</div>
+      <div class='card-title'>Yoğun Hazırlık Kampı + Mentörlük Programı</div>
+      <p class='card-text'>Mentörünle birebir görüş, kişisel strateji geliştir ve zayıf noktalarını hızla gider.</p>
+      <ul class='card-features'>
+        <li>Haftalık birebir görüşme</li>
+        <li>Kişiselleştirilmiş çalışma planı</li>
+        <li>WhatsApp ile anlık destek</li>
+        <li>Üniversite seçimi &amp; başvuru danışmanlığı</li>
+        <li>Tüm Kamp içeriği dahil</li>
+        
+      </ul>
+      <div class='card-price'>75.000 TL<span> +KDV</span></div>
+    </div>
+
+    <div class='program-card'>
+      <div class='card-tag'>Hızlandırılmış &#183; Son Ay</div>
+      <div class='card-icon'>&#9889;</div>
+      <div class='card-title'>Son Sprint Paketi</div>
+      <p class='card-text'>Sınava 10 hafta kala maksimum verim için tasarlanmış yoğunlaştırılmış tekrar ve strateji programı.</p>
+      <ul class='card-features'>
+        <li>10 deneme sınavı + Analiz </li>
+        <li>Geçmiş yıl sınav analizleri</li>
+        <li>Zaman yönetimi teknikleri</li>
+        <li>Sınav günü stratejisi</li>
+      </ul>
+      <div class='card-price'>10.000 TL<span> +KDV</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- KONULAR -->
+<div id='konular' style='background: var(--teal-light); padding: 6rem 0; position: relative; overflow: hidden;'>
+  <svg style='position:absolute;inset:0;width:100%;height:100%;pointer-events:none;' viewBox='0 0 1440 700'>
+    <g fill='none' opacity='0.32' stroke='#2BAFA0' stroke-linecap='round' stroke-linejoin='round'>
+      <g transform='translate(60,80)'>
+        <line stroke-width='3' x1='30' x2='90' y1='200' y2='200'/>
+        <line stroke-width='3' x1='60' x2='60' y1='200' y2='150'/>
+        <rect fill='rgba(43,175,160,0.16)' height='90' rx='4' stroke-width='2.5' width='24' x='48' y='60'/>
+        <rect fill='rgba(43,175,160,0.24)' height='18' rx='5' stroke-width='2.5' width='32' x='44' y='44'/>
+        <line stroke-width='3' x1='60' x2='60' y1='150' y2='170'/>
+        <circle cx='60' cy='173' r='8' stroke-width='2.5'/>
+        <rect fill='rgba(43,175,160,0.16)' height='10' rx='2' stroke-width='2' width='80' x='20' y='130'/>
+        <path d='M60,60 Q95,60 95,100 Q95,150 80,150' stroke-width='2.5'/>
+      </g>
+      <g transform='translate(1260,80)'>
+        <ellipse cx='80' cy='80' fill='rgba(43,175,160,0.32)' rx='72' ry='62' stroke-width='2.5'/>
+        <ellipse cx='75' cy='75' fill='rgba(43,175,160,0.4)' rx='28' ry='22' stroke-width='2'/>
+        <circle cx='72' cy='72' fill='rgba(43,175,160,0.32)' r='7' stroke-width='1.5'/>
+        <ellipse cx='110' cy='50' rx='12' ry='7' stroke-width='1.5'/>
+        <ellipse cx='40' cy='100' rx='10' ry='6' stroke-width='1.5'/>
+        <ellipse cx='120' cy='105' rx='9' ry='5' stroke-width='1.3'/>
+        <ellipse cx='80' cy='80' rx='65' ry='56' stroke-dasharray='5,4' stroke-width='1'/>
+      </g>
+    </g>
+  </svg>
+  <div style='position:relative;z-index:1;max-width:1100px;margin:0 auto;padding:0 2rem;'>
+    <div class='eyebrow'>Müfredat</div>
+    <h2 class='section-title'>IMAT&#39;ın Tüm Konuları<br/>Tek Çatı Altında</h2>
+    <div class='divider'/>
+    <p class='section-desc'>İtalya Eğitim Bakanlığı&#39;nın resmi IMAT müfredatındaki tüm başlıkları kapsıyoruz.</p>
+
+    <div class='subjects-grid'>
+      <div class='subject-card'>
+        <div class='subject-icon'>🧬</div>
+        <div>
+          <div class='subject-name'>Biology</div>
+          <div class='subject-detail'>Cell biology, genetics, evolution, ecology, etc.</div>
+        </div>
+      </div>
+      <div class='subject-card'>
+        <div class='subject-icon'>&#9879;&#65039;</div>
+        <div>
+          <div class='subject-name'>Chemistry</div>
+          <div class='subject-detail'>General chemistry, organic chemistry, biochemistry, etc.</div>
+        </div>
+      </div>
+      <div class='subject-card'>
+        <div class='subject-icon'>🔬</div>
+        <div>
+          <div class='subject-name'>Physics</div>
+          <div class='subject-detail'>Mechanics, thermodynamics, electricity, optics, etc.</div>
+        </div>
+      </div>
+      <div class='subject-card'>
+        <div class='subject-icon'>📐</div>
+        <div>
+          <div class='subject-name'>Mathematics</div>
+          <div class='subject-detail'>Algebra, trigonometry, analytic geometry, etc.</div>
+        </div>
+      </div>
+      <div class='subject-card'>
+        <div class='subject-icon'>🧠</div>
+        <div>
+          <div class='subject-name'>Logical Reasoning</div>
+          <div class='subject-detail'>Analytical thinking, problem solving, etc.</div>
+        </div>
+      </div>
+      <div class='subject-card'>
+        <div class='subject-icon'>📖</div>
+        <div>
+          <div class='subject-name'>English Reading Comprehension</div>
+          <div class='subject-detail'>Academic text reading and interpretation, etc.</div>
+        </div>
+      </div>
+      <div class='subject-card'>
+        <div class='subject-icon'>🏛&#65039;</div>
+        <div>
+          <div class='subject-name'>General Knowledge</div>
+          <div class='subject-detail'>History, geography, general culture, etc.</div>
+        </div>
+      </div>
+      <div class='subject-card'>
+        <div class='subject-icon'>🎯</div>
+        <div>
+          <div class='subject-name'>Exam Strategy</div>
+          <div class='subject-detail'>Time management, elimination techniques, etc.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- SSS -->
+<div id='sss' style='padding: 6rem 0;'>
+  <div style='max-width:900px;margin:0 auto;padding:0 2rem;'>
+    <div class='eyebrow'>Merak Edilenler</div>
+    <h2 class='section-title'>Sık Sorulan Sorular</h2>
+    <div class='divider'/>
+
+    <div class='faq-list'>
+      <div class='faq-item'>
+        <button class='faq-question' onclick='toggleFaq(this)'>
+          IMAT nedir ve kimler girebilir?
+          <span class='faq-arrow'>&#9662;</span>
+        </button>
+        <div class='faq-answer'>IMAT (International Medical Admissions Test), İtalya&#39;daki devlet üniversitelerinin İngilizce tıp programlarına uluslararası öğrenci kabulü için yapılan sınavdır. Lise mezunu veya son sınıf öğrencisi olan herkes girebilir. Sınav, Eylül ayında İtalya&#39;da düzenlenir.</div>
+      </div>
+      <div class='faq-item'>
+        <button class='faq-question' onclick='toggleFaq(this)'>
+          Dersler canlı mı, yoksa kayıttan mı takip ediliyor?
+          <span class='faq-arrow'>&#9662;</span>
+        </button>
+        <div class='faq-answer'>Temel kampımızda dersler canlı online olarak Zoom üzerinden yapılır. Tüm dersler kayıt altına alınır ve bir sonraki IMAT sınavına kadar tekrar izleyebilirsin. Birebir mentörlük seansları ise Google Meet veya Zoom ile yürütülür.</div>
+      </div>
+      <div class='faq-item'>
+        <button class='faq-question' onclick='toggleFaq(this)'>
+          Türkçe mi, İngilizce mi işlenecek?
+          <span class='faq-arrow'>&#9662;</span>
+        </button>
+        <div class='faq-answer'>Ders anlatımları Türkçe yapılır; terminoloji ve soru çözümleri ise İngilizce olarak ilerler. Böylece hem konuyu rahat anlarsın hem de sınav dilinde pratik yaparsın.</div>
+      </div>
+      <div class='faq-item'>
+        <button class='faq-question' onclick='toggleFaq(this)'>
+          Kaç kişiyle grup dersleri yapılıyor?
+          <span class='faq-arrow'>&#9662;</span>
+        </button>
+        <div class='faq-answer'>Grup dersleri maksimum 15 öğrenciyle yürütülür. Bu sayede mentörünüz sana yeterince zaman ayırabilir ve soru sormak için beklemek zorunda kalmazsın.</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- CTA FINAL -->
+<div class='cta-section' id='kayit'>
+  <div class='eyebrow'>Başvuru</div>
+  <h2 class='section-title'>Hayalindeki Tıp Fakültesine<br/><em style='font-style: italic; color: rgba(255,255,255,0.85);'>Bir Adım Kaldı</em></h2>
+  <p class='section-desc'>Ücretsiz danışmanlık görüşmesi al. Sana en uygun programı birlikte belirleyelim.</p>
+  <div style='display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;'>
+    <a class='btn-white' href='mailto:info@uniqsakademi.com'>Randevu Al &#183; Ücretsiz</a>
+    <a class='btn-outline-white' href='https://wa.me/905393673263'>WhatsApp&#39;tan Ulaş</a>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <p>&#169; 2026 Uniqs &#183; <a href='#'>Gizlilik Politikası</a></p>
+</footer>
+
+<script>
+/* <![CDATA[ */
+  const SINAV_TARIHI = new Date('2026-09-10T09:00:00');
+  function guncelleSayac() {
+    const fark = SINAV_TARIHI - new Date();
+    if (fark <= 0) return;
+    const gun = Math.floor(fark / 86400000);
+    const saat = Math.floor((fark % 86400000) / 3600000);
+    const dakika = Math.floor((fark % 3600000) / 60000);
+    const saniye = Math.floor((fark % 60000) / 1000);
+    document.getElementById('cd-gun').textContent = gun;
+    document.getElementById('cd-saat').textContent = String(saat).padStart(2,'0');
+    document.getElementById('cd-dakika').textContent = String(dakika).padStart(2,'0');
+    document.getElementById('cd-saniye').textContent = String(saniye).padStart(2,'0');
+  }
+  guncelleSayac();
+  setInterval(guncelleSayac, 1000);
+  function toggleFaq(btn) {
+    const item = btn.closest('.faq-item');
+    const wasOpen = item.classList.contains('open');
+    document.querySelectorAll('.faq-item.open').forEach(el => el.classList.remove('open'));
+    if (!wasOpen) item.classList.add('open');
+  }
+/* ]]> */
+</script>
+
+</body>
+</html>
