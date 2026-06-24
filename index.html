@@ -4,55 +4,69 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Uniqs · IMAT Yoğun Hazırlık Kampı</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
     <style>
-        /* CSS KODLARININ TAMAMI BURADA */
+        /* CSS Başlangıcı */
         *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-        :root { --gold: #FF6B00; --gold-mid: #FF8C33; --gold-light: #2BAFA0; --gold-pale: #FFE8D6; --gold-xpale: #FFF5EE; --teal: #2BAFA0; --teal-light: #E6F7F5; --white: #FFFFFF; --off-white: #F5FAFA; --text-dark: #1A2422; --text-mid: #3D5450; --text-muted: #7A9E99; --border: rgba(43,175,160,0.18); --border-strong: rgba(255,107,0,0.4); --section-alt: #EBF8F7; }
+        :root { --gold: #FF6B00; --gold-mid: #FF8C33; --gold-pale: #FFE8D6; --teal: #2BAFA0; --white: #FFFFFF; --text-dark: #1A2422; --text-mid: #3D5450; --border: rgba(43,175,160,0.18); }
         body { font-family: 'Inter', sans-serif; background: var(--white); color: var(--text-dark); line-height: 1.7; }
         
-        nav { position: sticky; top: 0; z-index: 100; background: rgba(255,255,255,0.97); backdrop-filter: blur(12px); border-bottom: 1px solid var(--border); padding: 0 2rem; display: flex; align-items: center; justify-content: space-between; height: 64px; }
-        .nav-logo { display: flex; align-items: center; }
-        .nav-logo img { height: 32px; width: auto; }
+        nav { position: sticky; top: 0; z-index: 100; background: rgba(255,255,255,0.95); backdrop-filter: blur(10px); border-bottom: 1px solid var(--border); padding: 1rem 2rem; display: flex; align-items: center; justify-content: space-between; }
+        .nav-logo img { height: 30px; }
         .nav-links { display: flex; gap: 2rem; list-style: none; }
-        .nav-links a { font-size: 0.8rem; color: var(--text-muted); text-decoration: none; text-transform: uppercase; transition: color 0.2s; }
-        .nav-links a:hover { color: var(--gold); }
-        .nav-cta { background: var(--gold); color: #fff; padding: 0.5rem 1.25rem; border-radius: 4px; text-decoration: none; font-weight: 700; font-size: 0.78rem; text-transform: uppercase; }
+        .nav-links a { text-decoration: none; color: var(--text-mid); font-size: 0.8rem; text-transform: uppercase; }
+        .nav-cta { background: var(--gold); color: #fff; padding: 0.5rem 1.2rem; border-radius: 4px; text-decoration: none; font-weight: 700; font-size: 0.8rem; }
         
-        .hero { min-height: 80vh; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; padding: 4rem 2rem; background: linear-gradient(160deg, #FFF5EE 0%, #E6F7F5 100%); }
-        .hero h1 { font-family: 'Playfair Display', serif; font-size: 3rem; margin-bottom: 1rem; }
+        .hero { text-align: center; padding: 5rem 2rem; background: #FFF5EE; }
+        .hero h1 { font-family: 'Playfair Display', serif; font-size: 3rem; margin-bottom: 1rem; color: var(--text-dark); }
+        .hero h1 em { color: var(--gold); font-style: italic; }
         
-        .stats-bar { background: linear-gradient(135deg, var(--gold) 0%, #FF8C33 50%, var(--teal) 100%); padding: 3.5rem 2rem; color: white; text-align: center; }
-        .stat-num { font-family: 'Playfair Display', serif; font-size: 2.8rem; font-weight: 700; line-height: 1; margin-bottom: 0.4rem; }
-        .stat-label { font-size: 0.78rem; text-transform: uppercase; opacity: 0.8; }
+        section { padding: 4rem 2rem; max-width: 900px; margin: 0 auto; }
+        .section-title { font-family: 'Playfair Display', serif; margin-bottom: 2rem; text-align: center; }
         
+        /* SSS Bölümü Stili */
+        .faq-item { border: 1px solid var(--border); margin-bottom: 1rem; border-radius: 6px; overflow: hidden; }
+        .faq-question { width: 100%; padding: 1.2rem; background: #fff; border: none; text-align: left; font-weight: 600; cursor: pointer; display: flex; justify-content: space-between; }
+        .faq-answer { display: none; padding: 1rem; background: #fafafa; border-top: 1px solid var(--border); }
+        .faq-item.open .faq-answer { display: block; }
+
         @media (max-width: 768px) { .nav-links { display: none; } }
     </style>
 </head>
 <body>
 
     <nav>
-        <a class='nav-logo' href='/'><img alt='Uniqs Logo' src='https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhiKmnuiExz168vuomgiUml_EsTT5oyMR-_epx752Y-k4WkTa5AJKPTwAPyRi4WkznnAkkDIxsRmgWUy-9lDhYt8iK9cXu8hacj808ycoG3wxs86MYdOokpFL4A02pfSFGUGXXk0LXaYYl4hrnCfkqPPbHj879DWKHN5WE0BTUY733Kpd1GJHEC11PbPO4/s320/uniqs-logo.png'/></a>
+        <a class='nav-logo' href='/'><img alt='Logo' src='https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhiKmnuiExz168vuomgiUml_EsTT5oyMR-_epx752Y-k4WkTa5AJKPTwAPyRi4WkznnAkkDIxsRmgWUy-9lDhYt8iK9cXu8hacj808ycoG3wxs86MYdOokpFL4A02pfSFGUGXXk0LXaYYl4hrnCfkqPPbHj879DWKHN5WE0BTUY733Kpd1GJHEC11PbPO4/s320/uniqs-logo.png'/></a>
         <ul class='nav-links'>
             <li><a href='#program'>Program</a></li>
             <li><a href='#sss'>SSS</a></li>
         </ul>
-        <div class='nav-right'>
-            <a class='nav-cta' href='#'>WhatsApp</a>
-        </div>
+        <a class='nav-cta' href='#'>WhatsApp</a>
     </nav>
 
     <section class='hero'>
-        <h1>IMAT Yoğun Hazırlık Kampı</h1>
-        <p>Hayallerindeki tıp fakültesine bir adım daha yaklaş.</p>
+        <h1>IMAT Yoğun <em>Hazırlık Kampı</em></h1>
+        <p>İtalya'da tıp hayaline Uniqs ile yaklaş.</p>
     </section>
 
-    <section class="stats-bar">
-        <div class="stats-grid">
-            <div class="stat-num">50+</div>
-            <div class="stat-label">Saat Ders</div>
+    <section id='sss'>
+        <h2 class='section-title'>Sıkça Sorulan Sorular</h2>
+        <div class='faq-item'>
+            <button class='faq-question'>Kamp ne zaman başlıyor? <span>+</span></button>
+            <div class='faq-answer'>Kampımız Eylül ayında başlayıp sınav tarihine kadar devam etmektedir.</div>
+        </div>
+        <div class='faq-item'>
+            <button class='faq-question'>Dersler nerede yapılıyor? <span>+</span></button>
+            <div class='faq-answer'>Tüm derslerimiz profesyonel platformlar üzerinden canlı ve interaktif gerçekleşmektedir.</div>
         </div>
     </section>
 
+    <script>
+        document.querySelectorAll('.faq-question').forEach(button => {
+            button.addEventListener('click', () => {
+                button.parentElement.classList.toggle('open');
+            });
+        });
+    </script>
 </body>
 </html>
