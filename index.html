@@ -47,6 +47,28 @@
         <h1>IMAT Yoğun Hazırlık Kampı</h1>
         <p>Hayallerindeki tıp fakültesine bir adım daha yaklaş.</p>
     </section>
+<style>
+    /* Buradaki tüm eski kodları sil ve aşağıdakini yapıştır */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+        --gold: #FF6B00; --gold-mid: #FF8C33; --gold-light: #2BAFA0; --gold-pale: #FFE8D6; 
+        --gold-xpale: #FFF5EE; --teal: #2BAFA0; --teal-light: #E6F7F5; --white: #FFFFFF; 
+        --off-white: #F5FAFA; --text-dark: #1A2422; --text-mid: #3D5450; --text-muted: #7A9E99; 
+        --border: rgba(43,175,160,0.18); --border-strong: rgba(255,107,0,0.4); --section-alt: #EBF8F7;
+    }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Inter', sans-serif; background: var(--white); color: var(--text-dark); line-height: 1.7; }
 
+    /* Navigasyon ve diğer tüm stillerini buraya yapıştır... */
+    /* (Daha önce gönderdiğin uzun CSS kodunun tamamını buraya ekle) */
+    
+    /* ... */
+    
+    @media (max-width: 768px) {
+        .nav-links { display: none; }
+        .countdown { gap: 0.6rem; }
+        .countdown-num { font-size: 2rem; min-width: 52px; }
+    }
+</style>
 </body>
 </html>
